@@ -47,14 +47,17 @@ const AboutUS = () => {
                 <div className="flex justify-center mt-10 md:mt-0">
                   {linkAbout.map((us: IAboutUS, index: number) => {
                     return (
-                      <a
-                        className="bg-slate-500 w-14 md:w-20 mx-10 aspect-square  rounded-full flex justify-center items-center"
-                        key={index}
-                        href={us.url}
-                        target="_blank"
-                      >
-                        {us.icon}
-                      </a>
+                      <a href={us.url} target="_blank" className="my-3 bg-slate-500 w-14 md:w-20  mx-2 md:mx-10 aspect-square col-span-1 rounded-full flex justify-center items-center">
+                          {us.icon}
+                        </a>
+                      // <a
+                      //   className="bg-slate-500 w-14 md:w-20 mx-10 aspect-square  rounded-full flex justify-center items-center"
+                      //   key={index}
+                      //   href={us.url}
+                      //   target="_blank"
+                      // >
+                      //   {us.icon}
+                      // </a>
                     );
                   })}
                 </div>

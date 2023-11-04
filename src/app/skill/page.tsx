@@ -14,7 +14,7 @@ const Skill = () => {
           </h2>
           <p className="mt-4 text-zinc-400 mb-5">My tech stack</p>
         </div>
-        <div className="grid grid-cols-4 items-center ">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center ">
           {skills.map((skill: ISkill, index: number) => {
             return (
               <div key={index} className="my-3">

@@ -39,7 +39,7 @@ const CardExperience = ({ data }: { data: IExperience }) => {
         )}
       </div>
       <div
-        className={`px-6 py-5 overflow-hidden transition-[max-height] duration-500 ease-in bg-zinc-700/40 rounded-md grid grid-cols-2 gap-4 md:flex-row  ${
+        className={`px-6 py-5 overflow-hidden transition-[max-height] duration-500 ease-in bg-zinc-700/40 rounded-md grid grid-cols-1  md:grid-cols-2 gap-4 md:flex-row  ${
           expanded ? "min-h-[10rem] overflow-y-auto" : "hidden"
         }`}
       >
@@ -62,7 +62,7 @@ const CardExperience = ({ data }: { data: IExperience }) => {
               })}
             </div>
 
-            <hr className={`block md:hidden my-2`} />
+            <hr className={`block md:hidden mb-2 mt-7`} />
           </div>
         )}
         {data?.product && (
@@ -82,7 +82,7 @@ const CardExperience = ({ data }: { data: IExperience }) => {
               })}
             </div>
 
-            <hr className={`block md:hidden my-2`} />
+            {/* <hr className={`block md:hidden my-2`} /> */}
           </div>
         )}
       </div>
