@@ -136,3 +136,8 @@ button:hover .button-text {
 .experience-img img{
   margin:auto
 }
+
+.experience .anticon{
+  height: 20px;
+  width: 20px;
+}

@@ -49,10 +49,10 @@ const CardExperience = ({ data }: { data: IExperience }) => {
             <div className="flex-col">
               {data?.project?.map((project: IProject, index: number) => {
                 return (
-                  <div key={index} className="ml-5 my-2">
+                  <div key={index} className="ml-0 md:ml-5 my-2">
                     <div className="text-xl"> {project.detail}</div>
                     {project.language && (
-                      <div className="ml-5 flex">
+                      <div className="ml-0 md:ml-5  experience" style={{display:'-webkit-box'}}>
                         <ForwardOutlined className="my-auto mr-2" />
                         <div>{project.language}</div>
                       </div>
@@ -71,9 +71,9 @@ const CardExperience = ({ data }: { data: IExperience }) => {
             <div className="flex-col">
               {data?.product?.map((product: IProject, index: number) => {
                 return (
-                  <div key={index} className="ml-5 my-2">
+                  <div key={index} className="ml-0 md:ml-5 my-2">
                     <div className="text-xl">{product.detail}</div>
-                    <div className="ml-5 flex">
+                    <div className="ml-0 md:ml-5  experience" style={{display:'-webkit-box'}}>
                       <ForwardOutlined className="my-auto mr-2" />
                       <div>{product.language}</div>
                     </div>
