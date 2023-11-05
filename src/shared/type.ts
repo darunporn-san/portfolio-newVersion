@@ -30,3 +30,9 @@ export interface IExperience {
     name:string;
     image:string;
   }
+
+  export interface IExampleWorking{
+    name: string;
+    first_image: string;
+    second_image: string;
+  }

@@ -1,4 +1,4 @@
-import { IAboutUS, IExperience, INavigation, ISkill } from "./type";
+import { IAboutUS, IExampleWorking, IExperience, INavigation, ISkill } from "./type";
 import {
   StarOutlined,
   StarFilled,
@@ -15,7 +15,7 @@ export const navigation: INavigation[] = [
   { name: "About", href: "/about-me" },
   { name: "Experience", href: "/experience" },
   { name: "Skill", href: "/skill" },
-  // { name: "Contact", href: "/contact" },
+  { name: "Example", href: "/example" },
 ];
 
 export const education: IExperience[] = [
@@ -206,3 +206,17 @@ export const skills: ISkill[] = [
   },
   
 ];
+
+
+export const exampleWorking :IExampleWorking[]= [
+  {
+    name:'Leaflet',
+    first_image:'/images/example/leaflet-image.gif',
+    second_image:'/images/example/leaflet.png',
+  },
+  {
+    name:'Map',
+    first_image:'/images/example/map-image.gif',
+    second_image:'/images/example/map.png',
+  }
+]
