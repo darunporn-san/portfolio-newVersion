@@ -64,14 +64,14 @@ const AboutUS = () => {
               </div>
             </div>
           </div>
-          <div id="container">
+          <a id="container" href="/MintCV.pdf" target="_blank">
             <button className="learn-more">
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>
               </span>
               <span className="button-text">Download</span>
             </button>
-          </div>
+          </a>
         </div>
       </div>
     </div>
