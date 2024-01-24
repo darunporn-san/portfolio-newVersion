@@ -104,11 +104,10 @@ const AboutUS = () => {
           </a> */}
           </div>
           <a id="container" href="/MintCV.pdf" target="_blank">
-             <div className="absolute top-5 right-5 p-2 bg-[#f59e0b] rounded-full px-5 flex">
-            Resume <RobotOutlined className="m-auto pl-2" />
-          </div>
+            <div className="absolute top-5 right-5 p-2 bg-[#f59e0b] rounded-full px-5 flex">
+              Resume <RobotOutlined className="m-auto pl-2" />
+            </div>
           </a>
-         
         </div>
       </div>
     </div>

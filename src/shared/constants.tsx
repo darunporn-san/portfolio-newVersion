@@ -1,4 +1,11 @@
-import { IAboutUS, IExampleWorking, IExperience, INavigation, ISkill } from "./type";
+import {
+  IAboutUS,
+  IExampleProject,
+  IExampleWorking,
+  IExperience,
+  INavigation,
+  ISkill,
+} from "./type";
 import {
   StarOutlined,
   StarFilled,
@@ -60,7 +67,8 @@ export const workExperience: IExperience[] = [
       },
       {
         detail: "Data Collection for NBTC (Develop)",
-        language: "Next.JS, Antd, TailwindCSS, Highcharts, SWR, Leaflet",
+        language:
+          "Next.JS, Antd, TailwindCSS, Highcharts, Leaflet, Context API",
       },
       {
         detail: "Tookdee Website (Launched)",
@@ -82,7 +90,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "2021 - NOW",
+    year: "AUG 2021 - NOW",
   },
   {
     name: "Softnix Technology Co.,Ltd.",
@@ -106,7 +114,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "2019 - 2021",
+    year: "APR 2019 - JUL 2021",
   },
   {
     name: "2BSimple Co.,Ltd.",
@@ -124,7 +132,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "2018 - 2019",
+    year: "SEP 2018 - FEB 2019",
   },
 ];
 
@@ -136,7 +144,7 @@ export const aboutUS: IAboutUS[] = [
   },
   {
     label: "Email",
-    icon: <MailOutlined   />,
+    icon: <MailOutlined />,
     value: "darunporn.san@gmail.com",
   },
   {
@@ -204,19 +212,93 @@ export const skills: ISkill[] = [
     name: "Tailwind",
     image: "/images/skill/Tailwind.png",
   },
-  
 ];
 
-
-export const exampleWorking :IExampleWorking[]= [
+export const OBCL: IExampleWorking[] = [
   {
-    name:'Leaflet',
-    first_image:'/images/example/leaflet-image.gif',
-    second_image:'/images/example/leaflet.png',
+    name: "GeoJson Leaflet",
+    first_image: "/images/example/geojson-image.gif",
+    second_image: "/images/example/geojson.png",
   },
   {
-    name:'Map',
-    first_image:'/images/example/map-image.gif',
-    second_image:'/images/example/map.png',
+    name: "Radius Leaflet",
+    first_image: "/images/example/leaflet-image.gif",
+    second_image: "/images/example/leaflet.png",
+  },
+  {
+    name: "Routing Map",
+    first_image: "/images/example/routing-image.gif",
+    second_image: "/images/example/routing.png",
+  },
+  {
+    name: "Draw Canvas",
+    first_image: "/images/example/draw-image.gif",
+    second_image: "/images/example/draw.png",
+  },
+];
+
+export const DCP: IExampleWorking[] = [
+  {
+    name: "Signin",
+    first_image: "/images/example/sso-image.png",
+    second_image: "/images/example/sso.png",
+  },
+  {
+    name: "Bigdata",
+    first_image: "/images/example/bigdata-image.png",
+  },
+  {
+    name: "Academy",
+    first_image: "/images/example/academy-image.png",
+  },
+  {
+    name: "Map",
+    first_image: "/images/example/map-image.gif",
+    second_image: "/images/example/map.png",
+  },
+  {
+    name: "Chat",
+    first_image: "/images/example/chat-image.png",
+    second_image: "/images/example/chat.png",
+  },
+  {
+    name: "Interactive",
+    first_image: "/images/example/interactive-image.gif",
+    second_image: "/images/example/interactive.png",
+  },
+];
+
+export const exampleProject: IExampleProject[] = [
+  {
+    name: "Data Collection for NBTC",
+    detail: `โปรเจคนี้เป็นโปรเจคเกี่ยวกับปัญหาของสารสื่อสารในกรุงเทพ โดยการทำงานจะมีการเลือกตำแหน่งเพื่อที่จะแสดงเส้นทางตาม GoogleMap โดยดึงจาก Google API Key หลังจากนั้นจะมีการวัดกรอบเพื่อแสดงจุดปัญหาของสายสื่อสารนั้น มีตัวอย่างดังตามในรูปข้างล่าง\n
+    รูปที่ 1 : รูปนี้แสดงเส้นทางที่มีการเพิ่มข้อมูลไปแล้วโดยสามารถคลิ๊กในเส้นเพื่อดูรายละเอียด \n รูปที่ 2 : รูปนี้เมื่อทำการกดตรงตำแหน่งที่ต้องการจะมีให้ปรับรัศมีของวงกลทเพื่อที่จะแสดงข้อมูล \n รูปที่ 3 : รูปนี้จะเป้นขั้นตอนการเลือกพิกัดเส้นทางที่ต้องการและจะแสดงเส้นทางนั้น  \n รูปที่ 4 : รูปนี้จะเป็นขั้นตอนการวัด สี่เหลี่ยมหรือวงกลมบนรูปภาพที่มีการอัพโหลดไฟล์ `,
+    project: OBCL,
+  },
+  {
+    name: "All Project in Sports Authority of Thailand",
+    detail:
+      `โปรเจคนี้เป็นโปรเจคเกี่ยวกับการกีฬาซึ่งจะเป็นการเก็บแบบ BigData โดยจะมีการแบ่งเป็นทั้งหมด 4 โปรเจคย่อยในนี้ประกอบด้วย \n 
+      1 : Data Collection เป็นโปรเจคการเก็บข้อมูลต่างๆ ของนักกีฬา บุคลากร สนามกีฬา ทีม และการแข่งขัน \n 2 : Academy เป็นโปรเจคให้กรอกข้อมูลเพื่อได้รับใบ Certificate \n 
+      3 : E-Learning เป็นโปรเจคการเรียนการสอน โดยประกอบด้วยคอร์สต่างๆ จะมีทั้งบทเรียนและบททดสอบ ซึ่งในระหว่างการดูวิดิโอจะมีการให้นักเรียนได้มีการ interactive ตอบคำถาม หรือพักเบรค และยังมีแชทระหว่างนักเรียนที่เรียนอยู่ในคอร์สนั้นๆ ยังสามารถแชทกับครูผู้สอนเป้นการส่วนตัวได้อีกด้วย\n
+       4 : KPI เป็นโปรเจคเกี่ยวกับการวิเคราะห์ข้อมูลของ 3 โปรเจคข้างต้น โดยจะมีการแสดงผ่านกราฟต่างๆ เช่น piechart, barchart และ แสดงข้อมูลผ่านแผนที่ประเทศไทย`,
+    project: DCP,
+  },{
+    name: "Other Projects",
+    detail:`โปรเจคอื่นๆส่วนใหญ่เป็นเกี่ยวกับ Dashboard ที่ได้ทำการ analyze มาจาก backend หลังจากนั้นนำมาแสดงผลฝั่งของ frontend ตัวอย่างแยกตามบริษัท \n
+    1 : DA - People Counting หรือ Tookdee Website เป็นโปรเจคแสดงผลผ่าน Dashboard และ Report \n
+    2 : Softnix - โปรเจคการรถไฟเป็นโปรเจคที่ทำด้วย wordpress มีการแสดงข้อมูลและการกรอกข้อมูล Data Stewards, ออกแบบหน้าเว็บไซต์โดยใช้ Adobe XD และมีการช่วยกันออกแบบ redesign product ของบริษัทซึ่งเป็น product เกี่ยวกับการ analyze dashboard \n
+    3 : 2Bsimple - ที่นี้จะเป็นการแก้ css และเริ่มเรียนรู้ angular/ react`,
+    project:[]
+  },{
+    name: "Career Path Project (Mobile Developer)",
+    detail:'ตัวอย่าง project ทีเริ่มทำพร้อมกับศึกษาไปเรื่อยๆ',
+    project:[
+      {
+        name: "SwiftUI ",
+        first_image: "/images/example/swiftui-image.gif",
+        second_image: "/images/example/swiftui.png",
+      },
+    ]
   }
-]
+];

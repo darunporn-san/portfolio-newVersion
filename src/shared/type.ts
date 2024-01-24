@@ -34,5 +34,12 @@ export interface IExperience {
   export interface IExampleWorking{
     name: string;
     first_image: string;
-    second_image: string;
+    second_image?: string;
+  }
+
+  export interface IExampleProject{
+    name: string;
+    detail?:string
+    project:IExampleWorking[]
+
   }

@@ -16,7 +16,7 @@ const CardExperience = ({ data }: { data: IExperience }) => {
           expanded ? "mt-5 mb-2" : "my-5"
         } bg-zinc-800 p-3 flex flex-wrap flex-col md:flex-row shadow-white/25	 shadow-md`}
       >
-        <div className="flex items-center basis-1/4 justify-center text-4xl">
+        <div className="flex items-center basis-1/4 justify-center text-3xl">
           {data.year}
         </div>
         <div className="basis-1/4 flex justify-center my-5 md:my-0">
