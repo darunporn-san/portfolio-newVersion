@@ -24,7 +24,7 @@ const AboutUS = () => {
               <div className="col-span-12 md:col-span-4 p-5 m-auto">
                 <Image
                   alt=""
-                  src={"/images/about/profile_1.png"}
+                  src={"/images/about/profile_3.png"}
                   height={200}
                   width={400}
                 />
@@ -44,6 +44,7 @@ const AboutUS = () => {
                     );
                   })}
                 </div>
+              
                 <div className="flex justify-center mt-10 md:mt-0">
                   {linkAbout.map((us: IAboutUS, index: number) => {
                     return (

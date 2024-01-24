@@ -142,7 +142,7 @@ export const aboutUS: IAboutUS[] = [
   {
     label: "Address",
     icon: <HomeOutlined />,
-    value: "Bangkok, Thailand",
+    value: "Pakkret, Nonthaburi, Thailand",
   },
 ];
 
