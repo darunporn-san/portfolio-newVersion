@@ -193,10 +193,6 @@ export const skills: ISkill[] = [
     image: "/images/skill/vue.png",
   },
   {
-    name: "Nuxt",
-    image: "/images/skill/nuxt.png",
-  },
-  {
     name: "Vuetify",
     image: "/images/skill/vuetify.png",
   },
