@@ -59,10 +59,10 @@ const AboutUS = () => {
                     text={"Position : Middle Frontend Developer"}
                   />
                   <Detail icon={<RiseOutlined />} text={"Age : 29 years old"} />
-                  <Detail
+                  {/* <Detail
                     icon={<NodeIndexOutlined />}
                     text={"Career Path : Mobile Developer"}
-                  />
+                  /> */}
                   <div className="">
                     {aboutUS.map((us: IAboutUS, index: number) => {
                       return (

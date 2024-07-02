@@ -11,7 +11,6 @@ const Projects = () => {
     Array(exampleProject.length).fill(0)
   );
 
-  console.log("projects", currentIndex);
   const carouselInfiniteScroll = (e: number) => {
     const projectLength = exampleProject[e].project.length;
 
@@ -46,11 +45,6 @@ const Projects = () => {
         return newIndexes;
       });
     }
-    // console.log("current index", currentIndex, OBCL?.length - 1);
-    // if (currentIndex === 0) {
-    //   return setCurrentIndex(OBCL.length - 1);
-    // }
-    // return setCurrentIndex(currentIndex - 1);
   };
 
   return (
@@ -69,122 +63,125 @@ const Projects = () => {
           return (
             <>
               <div className="text-center text-2xl">{project.name}</div>
-             {project?.detail &&  <div className="details indent-8 break-all	">
-                &emsp;
-                {project?.detail?.split("\n").map((str) => (
-                  <div>{str}</div>
-                ))}
-              </div>}
-              {project.project?.length > 0 &&
-              <div className="flex justify-between">
-                {currentIndex[index] > 0 && (
+              {project?.detail && (
+                <div className="details indent-8 break-word	text-lg">
+                  &emsp;
+                  {project?.detail?.split("\n").map((str) => (
+                    <div>{str}</div>
+                  ))}
+                </div>
+              )}
+              {project.project?.length > 0 && (
+                <div className="flex justify-between">
+                  {currentIndex[index] > 0 && (
+                    <div
+                      className="m-auto "
+                      onClick={() => carouselInfiniteScrollPrevious(index)}
+                    >
+                      <CaretLeftOutlined className="text-5xl" />
+                    </div>
+                  )}
                   <div
-                    className="m-auto "
-                    onClick={() => carouselInfiniteScrollPrevious(index)}
+                    className="carousel-container"
+                    style={{ width: "-webkit-fill-available" }}
                   >
-                    <CaretLeftOutlined className="text-5xl" />
-                  </div>
-                )}
-                <div
-                  className="carousel-container"
-                  style={{ width: "-webkit-fill-available" }}
-                >
-                  {project.project.map(
-                    (example: IExampleWorking, j: number) => {
-                      return (
-                        <div
-                          key={j}
-                          className="carousel-item"
-                          style={{
-                            transform: `translate(-${
-                              currentIndex[index] * 100
-                            }%)`,
-                          }}
-                        >
-                          {example.second_image ? (
-                            <div>
-                              <div className="text-3xl md:hidden text-center">
-                                {example.name}
-                              </div>
-                              <div className="wrap animate pop">
-                                <div className=" overlay hidden md:flex">
-                                  <div className="overlay-content animate slide-left delay-2 w-1/4">
-                                    <h1 className="animate slide-left pop delay-4 text-5xl break-words">
-                                      {example.name}
-                                    </h1>
-                                  </div>
-                                  <div className="image-content animate slide delay-5">
-                                    <Image
-                                      alt=""
-                                      src={example.first_image}
-                                      height={200}
-                                      width={400}
-                                    />
-                                  </div>
+                    {project.project.map(
+                      (example: IExampleWorking, j: number) => {
+                        return (
+                          <div
+                            key={j}
+                            className="carousel-item"
+                            style={{
+                              transform: `translate(-${
+                                currentIndex[index] * 100
+                              }%)`,
+                            }}
+                          >
+                            {example.second_image ? (
+                              <div>
+                                <div className="text-3xl md:hidden text-center">
+                                  {example.name}
                                 </div>
-                                <div className="text w-[100%] md:w-[60vmin] image-detail">
-                                  <div className="md:hidden">
-                                    <div className="text-2xl text-black my-3">
-                                      Preview Image
+                                <div className="wrap animate pop">
+                                  <div className=" overlay hidden md:flex">
+                                    <div className="overlay-content animate slide-left delay-2 w-1/4">
+                                      <h1 className="animate slide-left pop delay-4 text-5xl break-words">
+                                        {example.name}
+                                      </h1>
                                     </div>
-                                    <Image
-                                      alt=""
-                                      src={example.first_image}
-                                      height={200}
-                                      width={400}
-                                    />
-                                    <div className="text-2xl text-black my-3">
-                                      Preview Coding
+                                    <div className="image-content animate slide delay-5">
+                                      <Image
+                                        alt=""
+                                        src={example.first_image}
+                                        height={200}
+                                        width={400}
+                                      />
                                     </div>
                                   </div>
+                                  <div className="text w-[100%] md:w-[60vmin] image-detail">
+                                    <div className="md:hidden">
+                                      <div className="text-2xl text-black my-3">
+                                        Preview Image
+                                      </div>
+                                      <Image
+                                        alt=""
+                                        src={example.first_image}
+                                        height={200}
+                                        width={400}
+                                      />
+                                      <div className="text-2xl text-black my-3">
+                                        Preview Coding
+                                      </div>
+                                    </div>
 
-                                  <Image
-                                    alt=""
-                                    src={example.second_image ?? ""}
-                                    height={200}
-                                    width={400}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          ) : (
-                            <div>
-                              <div className="text-3xl md:hidden text-center">
-                                {example.name}
-                              </div>
-                              <div className="nowrap animate pop">
-                                <div className=" overlay hidden md:flex">
-                                  <div className="overlay-content animate s w-1/4">
-                                    <h1 className="animate  pop delay-4 text-5xl break-words">
-                                      {example.name}
-                                    </h1>
-                                  </div>
-                                  <div className="image-content animate ">
                                     <Image
                                       alt=""
-                                      src={example.first_image}
+                                      src={example.second_image ?? ""}
                                       height={200}
                                       width={400}
                                     />
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    }
+                            ) : (
+                              <div>
+                                <div className="text-3xl md:hidden text-center">
+                                  {example.name}
+                                </div>
+                                <div className="nowrap animate pop">
+                                  <div className=" overlay hidden md:flex">
+                                    <div className="overlay-content animate s w-1/4">
+                                      <h1 className="animate  pop delay-4 text-5xl break-words">
+                                        {example.name}
+                                      </h1>
+                                    </div>
+                                    <div className="image-content animate ">
+                                      <Image
+                                        alt=""
+                                        src={example.first_image}
+                                        height={200}
+                                        width={400}
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      }
+                    )}
+                  </div>
+                  {currentIndex[index] !== project.project.length - 1 && (
+                    <div
+                      className="m-auto "
+                      onClick={() => carouselInfiniteScroll(index)}
+                    >
+                      <CaretRightOutlined className="text-5xl" />
+                    </div>
                   )}
                 </div>
-                {currentIndex[index] !== project.project.length - 1 && (
-                  <div
-                    className="m-auto "
-                    onClick={() => carouselInfiniteScroll(index)}
-                  >
-                    <CaretRightOutlined className="text-5xl" />
-                  </div>
-                )}
-              </div>}
+              )}
             </>
           );
         })}

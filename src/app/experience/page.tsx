@@ -52,7 +52,10 @@ const CardExperience = ({ data }: { data: IExperience }) => {
                   <div key={index} className="ml-0 md:ml-5 my-2">
                     <div className="text-xl"> {project.detail}</div>
                     {project.language && (
-                      <div className="ml-0 md:ml-5  experience" style={{display:'-webkit-box'}}>
+                      <div
+                        className="ml-0 md:ml-5  experience"
+                        style={{ display: "-webkit-box" }}
+                      >
                         <ForwardOutlined className="my-auto mr-2" />
                         <div>{project.language}</div>
                       </div>
@@ -73,7 +76,10 @@ const CardExperience = ({ data }: { data: IExperience }) => {
                 return (
                   <div key={index} className="ml-0 md:ml-5 my-2">
                     <div className="text-xl">{product.detail}</div>
-                    <div className="ml-0 md:ml-5  experience" style={{display:'-webkit-box'}}>
+                    <div
+                      className="ml-0 md:ml-5  experience"
+                      style={{ display: "-webkit-box" }}
+                    >
                       <ForwardOutlined className="my-auto mr-2" />
                       <div>{product.language}</div>
                     </div>
@@ -98,6 +104,11 @@ const Experience = () => {
     <div className="relative pb-16">
       <Navigation />
       <div className="px-6 pt-24  mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16  lg:pt-32">
+        <div className="mx-auto lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+            Work Status
+          </h2>
+        </div>
         <div className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Work Experience

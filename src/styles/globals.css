@@ -344,6 +344,7 @@ p {
 }
 .delay-4 {
   animation-delay: 1.2s;
+  font-size: clamp(1rem, 2.5vw, 4rem);
 }
 .delay-5 {
   animation-delay: 1.5s;
@@ -376,6 +377,7 @@ p {
 }
 .details{
   margin: 0 !important;
+  
   padding: 0 !important;
   padding-top: 1rem !important;
 }
