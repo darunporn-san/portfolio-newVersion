@@ -105,9 +105,35 @@ const Experience = () => {
       <Navigation />
       <div className="px-6 pt-24  mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16  lg:pt-32">
         <div className="mx-auto lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            Work Status
-          </h2>
+          <div className="flex justify-between">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+              Work Status
+            </h2>
+            <h2 className="flex align-bottom text-xl ">
+              <span className="text-red-500 mr-5">&#9673;</span> Unemployed 
+            </h2>
+          </div>
+
+          <div className="bg-zinc-800 p-3 flex mt-5 rounded-md">
+            <p className="text-white mb-2 mx-4">
+              &emsp;&emsp; I am currently{" "}
+              <span className="text-red-500">unemployed</span>. After resigning
+              from my job, I traveled to India ( Bengaluru ) for approximately 2
+              months to gain life experiences, explore, and meet new people.
+              This period served as a break from work, allowing me to relax and
+              gain insights into different ways of life from people of another
+              country. <br />
+              <br /> &emsp;&emsp;Upon my return, I am actively seeking new
+              employment opportunities, both in my previous role as a{" "}
+              <span className="text-emerald-400 ">frontend developer </span>
+               and in new fields of interest, such as{" "}
+              <span className="text-orange-400">
+                mobile developer </span> ( swift UI or flutter )
+             {" "}
+              or <span className="text-orange-400">Data Analyst</span>.
+            </p>
+          </div>
+          <div className="text-end mt-2">last updated: July 2024</div>
         </div>
         <div className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
