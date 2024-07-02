@@ -48,6 +48,11 @@ const AboutUS = () => {
                     height={200}
                     width={400}
                   />
+                    <a id="container" href="/MintCV.pdf" target="_blank" className="flex justify-center lg:hidden"> 
+            <div className="mt-5 p-2 bg-[#f59e0b] rounded-full px-5 flex ">
+              Resume <RobotOutlined className="m-auto pl-2" />
+            </div>
+          </a>
                 </div>
                 <div className="col-span-12 md:col-span-8 p-5 ">
                   <Detail
@@ -103,7 +108,7 @@ const AboutUS = () => {
             </button>
           </a> */}
           </div>
-          <a id="container" href="/MintCV.pdf" target="_blank">
+          <a id="container" href="/MintCV.pdf" target="_blank" className="hidden lg:flex"> 
             <div className="absolute top-5 right-5 p-2 bg-[#f59e0b] rounded-full px-5 flex">
               Resume <RobotOutlined className="m-auto pl-2" />
             </div>
