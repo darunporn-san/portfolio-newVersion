@@ -41,6 +41,12 @@ export const education: IExperience[] = [
 
 export const workExperience: IExperience[] = [
   {
+    name: "Officemate(OFM)",
+    position: "IT outsource (Frontend Developer)",
+    logo1: "",
+    year: "16 SEP 21 - NOW",
+  },
+  {
     name: "Digital Associates Co., Ltd.",
     position: "Middle Frontend Developer",
     logo1: "/images/experience/digital.png",
@@ -87,7 +93,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "AUG 2021 - APR 2024",
+    year: "AUG 21 - 16 APR 24",
   },
   {
     name: "Softnix Technology Co.,Ltd.",
@@ -111,7 +117,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "APR 2019 - JUL 2021",
+    year: "APR 19 - JUL 21",
   },
   {
     name: "2BSimple Co.,Ltd.",
@@ -129,7 +135,7 @@ export const workExperience: IExperience[] = [
       },
     ],
 
-    year: "SEP 2018 - FEB 2019",
+    year: "SEP 18 - FEB 19",
   },
 ];
 

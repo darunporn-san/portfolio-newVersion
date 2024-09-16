@@ -21,7 +21,9 @@ const CardExperience = ({ data }: { data: IExperience }) => {
         </div>
         <div className="basis-1/4 flex justify-center my-5 md:my-0">
           <div className="bg-white rounded-full p-3  aspect-square flex w-[100px] h-[100px] experience-img">
-            <Image alt="" src={data.logo1} height={70} width={80} />
+            {data.logo1 !== "" && (
+              <Image alt="" src={data.logo1} height={70} width={80} />
+            )}
           </div>
         </div>
 
@@ -38,68 +40,67 @@ const CardExperience = ({ data }: { data: IExperience }) => {
           </div>
         )}
       </div>
-      <div
-        className={`px-6 py-5 overflow-hidden transition-[max-height] duration-500 ease-in bg-zinc-700/40 rounded-md grid grid-cols-1  md:grid-cols-2 gap-4 md:flex-row  ${
-          expanded ? "min-h-[10rem] overflow-y-auto" : "hidden"
-        }`}
-      >
-        {data?.project && (
-          <div>
-            <div className="text-2xl text-center">Project</div>
-            <div className="flex-col">
-              {data?.project?.map((project: IProject, index: number) => {
-                return (
-                  <div key={index} className="ml-0 md:ml-5 my-2">
-                    <div className="text-xl"> {project.detail}</div>
-                    {project.language && (
+      {(data.product || data.project) && (
+        <div
+          className={`px-6 py-5 overflow-hidden transition-[max-height] duration-500 ease-in bg-zinc-700/40 rounded-md grid grid-cols-1  md:grid-cols-2 gap-4 md:flex-row  ${
+            expanded ? "min-h-[10rem] overflow-y-auto" : "hidden"
+          }`}
+        >
+          {data?.project && (
+            <div>
+              <div className="text-2xl text-center">Project</div>
+              <div className="flex-col">
+                {data?.project?.map((project: IProject, index: number) => {
+                  return (
+                    <div key={index} className="ml-0 md:ml-5 my-2">
+                      <div className="text-xl"> {project.detail}</div>
+                      {project.language && (
+                        <div
+                          className="ml-0 md:ml-5  experience"
+                          style={{ display: "-webkit-box" }}
+                        >
+                          <ForwardOutlined className="my-auto mr-2" />
+                          <div>{project.language}</div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              <hr className={`block md:hidden mb-2 mt-7`} />
+            </div>
+          )}
+          {data?.product && (
+            <div>
+              <div className="text-2xl  text-center">Product</div>
+              <div className="flex-col">
+                {data?.product?.map((product: IProject, index: number) => {
+                  return (
+                    <div key={index} className="ml-0 md:ml-5 my-2">
+                      <div className="text-xl">{product.detail}</div>
                       <div
                         className="ml-0 md:ml-5  experience"
                         style={{ display: "-webkit-box" }}
                       >
                         <ForwardOutlined className="my-auto mr-2" />
-                        <div>{project.language}</div>
+                        <div>{product.language}</div>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            <hr className={`block md:hidden mb-2 mt-7`} />
-          </div>
-        )}
-        {data?.product && (
-          <div>
-            <div className="text-2xl  text-center">Product</div>
-            <div className="flex-col">
-              {data?.product?.map((product: IProject, index: number) => {
-                return (
-                  <div key={index} className="ml-0 md:ml-5 my-2">
-                    <div className="text-xl">{product.detail}</div>
-                    <div
-                      className="ml-0 md:ml-5  experience"
-                      style={{ display: "-webkit-box" }}
-                    >
-                      <ForwardOutlined className="my-auto mr-2" />
-                      <div>{product.language}</div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
 
-            {/* <hr className={`block md:hidden my-2`} /> */}
-          </div>
-        )}
-      </div>
+              {/* <hr className={`block md:hidden my-2`} /> */}
+            </div>
+          )}
+        </div>
+      )}
     </>
   );
 };
 
 const Experience = () => {
-  const lorem =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
   return (
     <div className="relative pb-16">
       <Navigation />
@@ -110,30 +111,23 @@ const Experience = () => {
               Work Status
             </h2>
             <h2 className="flex align-bottom text-xl ">
-              <span className="text-red-500 mr-5">&#9673;</span> Unemployed 
+              <span className="text-emerald-400 mr-5">&#9673;</span> Employed
             </h2>
           </div>
 
           <div className="bg-zinc-800 p-3 flex mt-5 rounded-md">
             <p className="text-white mb-2 mx-4">
               &emsp;&emsp; I am currently{" "}
-              <span className="text-red-500">unemployed</span>. After resigning
-              from my job, I traveled to India ( Bengaluru ) for approximately 2
-              months to gain life experiences, explore, and meet new people.
-              This period served as a break from work, allowing me to relax and
-              gain insights into different ways of life from people of another
-              country. <br />
-              <br /> &emsp;&emsp;Upon my return, I am actively seeking new
-              employment opportunities, both in my previous role as a{" "}
+              <span className="text-emerald-400">employed</span>.
+              My role as a{" "}
               <span className="text-emerald-400 ">frontend developer </span>
-               and in new fields of interest, such as{" "}
-              <span className="text-orange-400">
-                mobile developer </span> ( swift UI or flutter )
-             {" "}
-              or <span className="text-orange-400">Data Analyst</span>.
+              and in new fields of interest, such as{" "}
+              <span className="text-orange-400">mobile developer </span> ( swift
+              UI or flutter ) or{" "}
+              <span className="text-orange-400">Data Analyst</span>.
             </p>
           </div>
-          <div className="text-end mt-2">last updated: July 2024</div>
+          <div className="text-end mt-2">last updated: 16 September 2024</div>
         </div>
         <div className="mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
